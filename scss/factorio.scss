@@ -12,6 +12,66 @@ body {
   height: 100%;
 }
 
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+a {
+  color: #7dcaed;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media(max-width: 1749px) {
+  .jump-list {
+    display: none;
+  }
+}
+
+.jump-list {
+  position: fixed;
+  width: 250px;
+  max-height: 95vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  left: calc((100vw - 1200px) / 2 - 266px - .5em);
+  top: .4em;
+  background-color: #313031;
+  box-shadow: inset 3px 0 3px -3px #201815, inset 2px 0 2px -2px #201815, inset 1px 0 1px -1px #201815, inset 0 3px 3px -3px #8f8c8b, inset 0 2px 2px -2px #8f8c8b, inset 0 1px 1px -1px #8f8c8b, inset -3px 0 3px -3px #201815, inset -2px 0 2px -2px #201815, inset -2px 0 1px -1px #201815, inset 0 -3px 3px -3px #000, inset 0 -2px 2px -2px #000, inset 0 -1px 1px -1px #000, 0 0 2px 0 #201815, 0 0 4px 0 #201815;
+  padding: .5em;
+
+  .insert-light {
+    padding: .4em;
+  }
+}
+
+.list-group {
+  margin: .5em 0;
+}
+
+.list-item:before {
+  content: '\2022';
+  margin-right: 4px;
+  font-size: 1.2em;
+  line-height: .8;
+}
+
+.list-item {
+  display: block;
+}
+
+.list-item.main {
+
+}
+
+.list-item.sub {
+  margin-left: .55em;
+}
+
 #container {
   margin: auto;
   max-width: 1200px;
@@ -66,8 +126,13 @@ body {
   border-bottom: 1px solid #333;
 }
 
+@media(min-width: 1200px) {
+  .problem-section {
+    margin-left: 2.5em;
+  }
+}
+
 .problem-section {
-  margin-left: 3em;
   margin-top: .75em;
   margin-bottom: .75em;
 }
